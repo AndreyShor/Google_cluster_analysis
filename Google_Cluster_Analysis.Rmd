@@ -1,0 +1,70 @@
+---
+title: "Google_cloud"
+author: "Andrejs Sorstkins"
+date: "2025-03-06"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Goofle Cluster Analysis
+
+This is Google cluster Data Exploration Scrypt
+
+```{r cars}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(warning = FALSE, message = FALSE)
+setwd("/Users/andrejs.sorstkins/Documents/Data Science /Big Data/Project")
+```
+
+## Iibraries import
+
+Import libraries
+
+```{r pressure, echo=FALSE}
+library(caret)
+library(tidyverse)
+library(ggplot2)
+# library(<my required library 1>)
+# library(<my required library 2>)
+# ...
+```
+
+Import Data
+```{r}
+
+data <- read.csv("./part-01_task_usage.csv")
+colnames(data) <- c(
+  "start_time_measurement",               # 1. start time of the measurement period
+  "end_time_measurement",                 # 2. end time of the measurement period
+  "job_ID",                               # 3. job ID
+  "task_index",                           # 4. task index
+  "machine_ID",                           # 5. machine ID
+  "mean_CPU_usage_rate",                  # 6. mean CPU usage rate
+  "canonical_memory_usage",               # 7. canonical memory usage
+  "assigned_memory_usage",                # 8. assigned memory usage
+  "unmapped_page_cache_memory_usage",     # 9. unmapped page cache memory usage
+  "total_page_cache_memory_usage",        # 10. total page cache memory usage
+  "maximum_memory_usage",                 # 11. maximum memory usage
+  "mean_disk_IO_time",                    # 12. mean disk I/O time
+  "mean_local_disk_space_used",           # 13. mean local disk space used
+  "maximum_CPU_usage",                    # 14. maximum CPU usage
+  "maximum_disk_IO_time",                 # 15. maximum disk IO time
+  "cycles_per_instruction_CPI",           # 16. cycles per instruction (CPI)
+  "memory_accesses_per_instruction_MAI",  # 17. memory accesses per instruction (MAI)
+  "sample_portion",                       # 18. sample portion
+  "aggregation_type",                     # 19. aggregation type (1 if maximums from subcontainers were summed)
+  "sampled_CPU_usage_mean"                # 20. sampled CPU usage: mean CPU usage during a sample period
+)
+
+
+View(data)
+```
+Information import
+
+
+
+
+
