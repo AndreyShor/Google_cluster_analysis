@@ -16,6 +16,7 @@ df = pd.read_csv(file_path)
 # Convert timestamp to datetime format (assuming it's in milliseconds)
 df["start_time_measurement"] = pd.to_datetime(df["start_time_measurement"], unit='ms')
 df["end_time_measurement"] = pd.to_datetime(df["end_time_measurement"], unit='ms')
+
 # Convert scientific notation values to standard float format
 df = df.applymap(lambda x: float(x) if isinstance(x, str) and 'e' in x.lower() else x)
 # Ensure 'mean_local_disk_space_used' is displayed as a standard decimal format

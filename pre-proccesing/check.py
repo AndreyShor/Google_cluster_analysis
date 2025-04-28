@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+from pandasgui import show
 
 file_path = "./../Data/task_usage_combined.csv" 
 df = pd.read_csv(file_path)
